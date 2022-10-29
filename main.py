@@ -18,4 +18,4 @@ def list():
     return render_template('collection.html', contents=contents)
 
 
-app.run(host='0.0.0.0', port=81)
+app.run(host='0.0.0.0', port=8080)
