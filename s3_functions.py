@@ -23,8 +23,9 @@ def show_image(bucket):
                                                          },
                                                          ExpiresIn=100)
         metadata = s3_client.head_object(Bucket=bucket, Key=item['Key'])
-        print(metadata)
+        print(item['Key'])
         if '.' in item['Key']:
+          if 'Diwali2022'  in item['Key']:
             public_urls.append(presigned_url)
 
     # print("[INFO] : The contents inside show_image = ", public_urls)
